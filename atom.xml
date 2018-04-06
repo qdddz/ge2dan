@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>二蛋の狗窝</title>
+  
+  <subtitle>电脑长按有惊喜，手机短按有彩蛋哦</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ge2dan.herokuapp.com/"/>
+  <updated>2018-04-05T15:10:26.749Z</updated>
+  <id>http://ge2dan.herokuapp.com/</id>
+  
+  <author>
+    <name>╭( ′• ㉨ •′ )╭☞葛二蛋</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>百度云基本满速下载方法</title>
+    <link href="http://ge2dan.herokuapp.com/2018/02/11/%E7%99%BE%E5%BA%A6%E4%BA%91%E5%9F%BA%E6%9C%AC%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/"/>
+    <id>http://ge2dan.herokuapp.com/2018/02/11/百度云基本满速下载方法/</id>
+    <published>2018-02-11T11:32:38.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>随便用个浏览器，要是怕麻烦直接用360浏览器，其他浏览器可能不方便找到这个插件似乎？</p></li><li><p>安装360浏览器，下载网站： <a href="http://chrome.360.cn/" target="_blank" rel="noopener">http://chrome.360.cn/</a></p></li><li><p>点开右上角“应用中心”<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image1.png" alt="图片"></p></li></ol><a id="more"></a><ol start="4"><li><p>搜索框里面输入“tam”（大小写随意）然后轻轻敲击键盘上的大大的回车键——ENTER<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image2.png" alt="图片"></p></li><li><p>点击安装<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image3.png" alt="图片"></p></li><li><p>确认添加<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image4.png" alt="图片"></p></li><li><p>然后就会跳转到这个页面。。。无视这东西。。。<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image5.png" alt="图片"></p></li><li><p>浏览器右上角点击那个像是“猴子”的图标<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image6.png" alt="图片"></p></li><li><p>点击“添加新脚本”<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image7.png" alt="图片"></p></li><li><p>然后复制下面的代码（源文件在“杂七杂八”里面也有，名为“百度网盘直接下载脚本.txt”全文复制也可以，其实都是一样的，就怕网页里会产生神奇的格式错误）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// ==UserScript==</span><br><span class="line">// @name 百度网盘直接下载（请看脚本说明）</span><br><span class="line">// @version      1.2</span><br><span class="line">// @description 本版适用于最新百度网盘！分享页面也可以下载哦，反正我就是不用度娘云管家！</span><br><span class="line">// @match        *://pan.baidu.com/disk/home*</span><br><span class="line">// @match        *://yun.baidu.com/disk/home*</span><br><span class="line">// @match        *://pan.baidu.com/s/*</span><br><span class="line">// @match        *://yun.baidu.com/s/*</span><br><span class="line">// @match        *://pan.baidu.com/share/link*</span><br><span class="line">// @match        *://yun.baidu.com/share/link*</span><br><span class="line">// @run-at       document-start</span><br><span class="line">// @include        *://pan.baidu.com/disk/home*</span><br><span class="line">// @include        *://yun.baidu.com/disk/home*</span><br><span class="line">// @include        *://pan.baidu.com/s/*</span><br><span class="line">// @include        *://yun.baidu.com/s/*</span><br><span class="line">// @include        *://pan.baidu.com/share/link*</span><br><span class="line">// @include        *://yun.baidu.com/share/link*</span><br><span class="line">// @run-at       document-start</span><br><span class="line">// @namespace http://jixun.org/</span><br><span class="line">// ==/UserScript==</span><br><span class="line">try &#123; var w=unsafeWindow; &#125; catch (e) &#123; var w=window; &#125;</span><br><span class="line">w.navigator.__defineGetter__ (&apos;platform&apos;, function () &#123;return &apos;Cracked by Jixun ^^&apos;;&#125;);</span><br></pre></td></tr></table></figure></li><li><p>点击左上角的保存按钮（从左向右的第二个）<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image8.png" alt="图片"></p></li><li><p>然后。。。找到你想下载的资源<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image9.png" alt="图片"><br>假如我只想下载这一个资源。。。但是！！！百度云是个神奇的东西！！想单单下载一个会莫名其妙地慢。。。这时，有WS方法一：再勾选一个小点的文件，组成两个文件一并下载<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image10.png" alt="图片"><br>当然，有时会遇到下载界面就一个文件的情况。。。那就可以使用WS方法二：先保存到自己网盘里面<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image11.png" alt="图片"><br>然后随便上传一个小文件<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image12.png" alt="图片"><br>最后同理勾选两个一起下载<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image13.png" alt="图片"><br>。。。。其实，要是一下想下多个文件就根本不需要我多啰嗦。。。。</p></li><li><p>点击完下载会出现“新建下载任务”窗口，在网址一栏上点击鼠标右键<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image14.png" alt="图片"><br>选择“全选”<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image15.png" alt="图片"><br>再次在网址栏上右键，选择复制（其实直接按住Ctrl+C即可完成复制）<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image16.png" alt="图片"></p></li><li><p>现在，下载链接就搞到手咯，复制到迅雷里即可下载了。<br>或者使用IDM这种国外的神级下载器，这都随意了（我会另外介绍IDM的简单搞法。。。）<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image17.png" alt="图片"><br>看着神一般的速度hhh~~~2333</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;随便用个浏览器，要是怕麻烦直接用360浏览器，其他浏览器可能不方便找到这个插件似乎？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装360浏览器，下载网站： &lt;a href=&quot;http://chrome.360.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://chrome.360.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;点开右上角“应用中心”&lt;br&gt;&lt;img src=&quot;https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/bdy/image1.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/categories/%E7%9E%8E%E6%90%9E/"/>
+    
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E6%90%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lightingroom等Adobe套件简明安装</title>
+    <link href="http://ge2dan.herokuapp.com/2018/02/11/Lightingroom%E7%AD%89Adobe%E5%A5%97%E4%BB%B6%E7%AE%80%E6%98%8E%E5%AE%89%E8%A3%85/"/>
+    <id>http://ge2dan.herokuapp.com/2018/02/11/Lightingroom等Adobe套件简明安装/</id>
+    <published>2018-02-11T11:31:07.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>前言：后来才知道，过了30天试用期以后就破解很难成功了，所以安装完30天内就要Creak。。本次提供某个大牛的全套破解版，免去了用户破解的步骤。</p></blockquote><p>全套Adobe软件<a href="https://pan.baidu.com/s/1bp3uUJl#zyt7" title="点我下载" target="_blank" rel="noopener">下载地址： </a></p><p>网盘访问码<strong>zyt7</strong></p><p>压缩包解压密码<strong>@vposy</strong></p><a id="more"></a><blockquote><p>本人诚挚建议。。。需要下载的话尽量选“各独立版软件压缩包”。否则，文件大得吓死人而且很多也用不到。</p></blockquote><p>本文将会以Lightroom作为样例，介绍基础安装过程。<br>Lightroom<a href="https://pan.baidu.com/s/1mhJHHzE" title="点我下载" target="_blank" rel="noopener">下载地址：</a></p><p>网盘访问码<strong>2538</strong><br>（如此中二肯定是我转载后二次分享的）</p><ol><li><p>解压文件（记得有密码，密码见上）点击“Set-up.exe”安装<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image1.png" alt="图片"></p></li><li><p>我出现了这个。。。反正点“忽略”，才不管它！<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image2.png" alt="图片"><br>看，还是给我安装的啊2333<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image3.png" alt="图片"></p></li><li><p>没啥要管的，直接安装<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image4.png" alt="图片"></p></li><li><p>。。。我居然出了错误。。<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image5.png" alt="图片"></p></li><li><p>错误摘要如下，大概意思就是有个组件安装失败了，无伤大雅。。。只是一个运行库出错，应该能用。<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image6.png" alt="图片"></p></li><li><p>然后，啥也不管。。直接打开，果然能打开。<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image7.png" alt="图片"></p></li><li><p>。。。默认已经激活了<br>PS：AMTemu就是时下最常用的破解补丁。。。。<br><img src="https://qdddz2538-1255901762.cos.ap-shanghai.myqcloud.com/hexo/lr/image8.png" alt="图片"></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前言：后来才知道，过了30天试用期以后就破解很难成功了，所以安装完30天内就要Creak。。本次提供某个大牛的全套破解版，免去了用户破解的步骤。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;全套Adobe软件&lt;a href=&quot;https://pan.baidu.com/s/1bp3uUJl#zyt7&quot; title=&quot;点我下载&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址： &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;网盘访问码&lt;strong&gt;zyt7&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;压缩包解压密码&lt;strong&gt;@vposy&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/categories/%E7%9E%8E%E6%90%9E/"/>
+    
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E6%90%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册edu邮箱</title>
+    <link href="http://ge2dan.herokuapp.com/2018/01/30/%E6%B3%A8%E5%86%8Cedu%E9%82%AE%E7%AE%B1/"/>
+    <id>http://ge2dan.herokuapp.com/2018/01/30/注册edu邮箱/</id>
+    <published>2018-01-30T01:18:22.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<link href="/style.css" rel="stylesheet" type="text/css"><script src="/crypto-js.js"></script><script src="/mcommon.js"></script><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <div id="security"> <div class="input-container"> <input type="password" class="form-control" id="pass" placeholder=" 请输入文章密码: " /> <label for="pass"> 请输入文章密码: </label> <div class="bottom-line"></div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>]]></content>
+    
+    <summary type="html">
+    
+      本文设置了访问权限，请联系某二蛋看他心情是不是想给你密码&lt;/br&gt;
+    
+    </summary>
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/categories/%E7%9E%8E%E6%90%9E/"/>
+    
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E6%90%9E/"/>
+    
+      <category term="edu" scheme="http://ge2dan.herokuapp.com/tags/edu/"/>
+    
+      <category term="麻烦事" scheme="http://ge2dan.herokuapp.com/tags/%E9%BA%BB%E7%83%A6%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于科学上网</title>
+    <link href="http://ge2dan.herokuapp.com/2018/01/29/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>http://ge2dan.herokuapp.com/2018/01/29/关于科学上网/</id>
+    <published>2018-01-29T01:46:38.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实，我们的网络之外有一座巨大的长城防火墙，抑制着我们的网络。打个比方，你上不了Google，是因为它在墙外。。。</p><blockquote><p>丢个链接，看你能不能访问：<a href="www.google.hk" title="点击访问"> 我就是Google </a></p></blockquote><a id="more"></a><p>好吧，这里只谈谈为什么要科学上网。主要是为了突破这种不自由。Google相比于国内搜索引擎，首先百度值得肯定的是在中国的本地化，经常使用你就会发现，诚然要比其他搜索引擎要准确快捷，<strong><em>但是</em></strong>，它正因为一家独大惯了，所以就很浮。。基本上搜出来的结果，前几个都是广告。。而且，部分敏感词汇，你是搜不出来的，比如说 <strong> shadowsocks </strong>。而老Google表示。。我才是世界最大的搜索引擎。。。好用程度，无需多言了吧？</p><p>同样的，对于我们用的手机，很多是基于老Google家的Android。对于某些手机，你会惊讶的发现，日历用不了添加日程。。（需要登录Google账号同步）而且，你还会发现，咦？我在网上下载的软件怎么变成了某某市场了？我下载的应用为什么打开后提示“未发现Google服务”就闪退了？我的网游（EA表示。。Gameloft表示。。）怎么那么卡？等等。</p><p>所以，真切祝你打开外面的世界╮（╯＿╰）╭</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实，我们的网络之外有一座巨大的长城防火墙，抑制着我们的网络。打个比方，你上不了Google，是因为它在墙外。。。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;丢个链接，看你能不能访问：&lt;a href=&quot;www.google.hk&quot; title=&quot;点击访问&quot;&gt; 我就是Google &lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://ge2dan.herokuapp.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E6%90%9E/"/>
+    
+      <category term="水表" scheme="http://ge2dan.herokuapp.com/tags/%E6%B0%B4%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>由放不放假而想到的</title>
+    <link href="http://ge2dan.herokuapp.com/2018/01/28/%E6%B5%85%E8%B0%88%E6%95%99%E8%82%B2%E5%B1%80/"/>
+    <id>http://ge2dan.herokuapp.com/2018/01/28/浅谈教育局/</id>
+    <published>2018-01-28T12:46:38.000Z</published>
+    <updated>2018-04-05T15:10:26.752Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>前言：本文立场仅代表个人意见</code></p><p>本人首先的立场是作为一个<strong>学生党</strong>，鬼才不希望延考呢。。。然而，你永远无法预料到事情的发展与变化。关于是否放假，依旧争论不休。</p><p>俗话说，人比人气死人。首先吧，我们能听到的便是马鞍山市的小兄弟当涂延考的消息，（即使unmm高中排除在外。。。）这早早的发文通知，体现了作为政府机关之一的教育局的行政效率，是值得肯定的。</p>]]></content>
+    
+    <summary type="html">
+    
+      也就发表发表个人意见
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://ge2dan.herokuapp.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="瞎说" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于edu邮箱</title>
+    <link href="http://ge2dan.herokuapp.com/2018/01/28/%E5%85%B3%E4%BA%8Eedu%E9%82%AE%E7%AE%B1/"/>
+    <id>http://ge2dan.herokuapp.com/2018/01/28/关于edu邮箱/</id>
+    <published>2018-01-28T10:02:33.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为扫描全能王提供edu邮箱有福利，所以就折腾了几个edu邮箱。<br>如果愿意折腾的那就自己去开拓未来，我会提供我的一些方法，当然，如果缺乏动手能力，可以随意我的edu邮箱，地址如下</p><p><a href="mailto:`pjohn@student.cccs.edu" target="_blank" rel="noopener">`pjohn@student.cccs.edu</a>`</p><p>反正我发现的一些edu邮箱福利如下：<br><a id="more"></a></p><ol><li>扫描全能王去广告</li><li>Autodesk 软件全免费</li><li>微软Imagine计划（主要是Azrue）</li><li>亚马逊六个月的高级会员（免邮o）</li><li>GitHub Education pack  </li><li>像我一样折腾个免费不要钱24小时在线的站点（基于Azure）  </li><li>JetBrian一堆套件也免费  </li><li>Office 365 和 Onedrive  </li><li>。。。。。。更多事情，等你们搞  </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      edu邮箱的一些。。胡吹？
+    
+    </summary>
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/categories/%E7%9E%8E%E6%90%9E/"/>
+    
+    
+      <category term="瞎搞" scheme="http://ge2dan.herokuapp.com/tags/%E7%9E%8E%E6%90%9E/"/>
+    
+      <category term="edu" scheme="http://ge2dan.herokuapp.com/tags/edu/"/>
+    
+      <category term="麻烦事" scheme="http://ge2dan.herokuapp.com/tags/%E9%BA%BB%E7%83%A6%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开服（坑）大吉</title>
+    <link href="http://ge2dan.herokuapp.com/2018/01/28/%E5%BC%80%E6%9C%8D%EF%BC%88%E5%9D%91%EF%BC%89%E5%A4%A7%E5%90%89/"/>
+    <id>http://ge2dan.herokuapp.com/2018/01/28/开服（坑）大吉/</id>
+    <published>2018-01-27T16:00:00.000Z</published>
+    <updated>2018-04-05T15:10:26.749Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="假装庆祝开服大吉吧😂！"><a href="#假装庆祝开服大吉吧😂！" class="headerlink" title="假装庆祝开服大吉吧😂！"></a>假装庆祝开服大吉吧😂！</h2><p>先严正声明，标题不要连读～</p><p>这是一个<strong>纯技术</strong>的网站，基于免费的heroku服务运行，免费的coding代码仓库进行备份，还有运行的是免费的hexo博客</p><p>总之，这又没有花我一分钱。。折腾的却是要死要活。。因为这博客没有专门的管理后台，全靠打代码emmm</p><p>没事，像我一样假的码农经过无数次百度也会成功的。。。</p><p>好了，话不多说，重放镇楼神图！<br><img src="http://ou9e2wgm7.bkt.clouddn.com/ab7cd7510fb30f24ad3b0410cb95d143ac4b0372.png" alt=" 帅气如我的镇楼图 " title="镇楼专用"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;假装庆祝开服大吉吧😂！&quot;&gt;&lt;a href=&quot;#假装庆祝开服大吉吧😂！&quot; class=&quot;headerlink&quot; title=&quot;假装庆祝开服大吉吧😂！&quot;&gt;&lt;/a&gt;假装庆祝开服大吉吧😂！&lt;/h2&gt;&lt;p&gt;先严正声明，标题不要连读～&lt;/p&gt;
+&lt;p&gt;这是一个&lt;stro
+      
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://ge2dan.herokuapp.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="想不出来" scheme="http://ge2dan.herokuapp.com/tags/%E6%83%B3%E4%B8%8D%E5%87%BA%E6%9D%A5/"/>
+    
+  </entry>
+  
+</feed>
