@@ -14,8 +14,15 @@
     </url>
 
     <url>
+        <loc>http://ge2dan.herokuapp.com/categories/%E6%90%9E%E4%BA%8B/</loc>
+        <lastmod>2018-04-15T16:33:02.705Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://ge2dan.herokuapp.com/categories/%E6%9D%82%E8%B0%88/</loc>
-        <lastmod>2018-04-15T16:29:33.043Z</lastmod>
+        <lastmod>2018-04-15T16:33:57.814Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
